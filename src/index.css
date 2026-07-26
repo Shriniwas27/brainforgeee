@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fcf9f8;
+  --on-background: #1c1b1b;
+  --primary: #835500;
+  --on-primary: #ffffff;
+  --primary-container: #f5a623;
+  --on-primary-container: #644000;
+  --secondary: #615955;
+  --on-secondary: #ffffff;
+  --secondary-container: #b8ada9;
+  --on-secondary-container: #332d2a;
+  --tertiary: #615955;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #b8ada9;
+  --on-tertiary-container: #332d2a;
+  --surface: #fcf9f8;
+  --on-surface: #1c1b1b;
+  --surface-variant: #e5e2e1;
+  --on-surface-variant: #524534;
+  --surface-dim: #dcd9d9;
+  --surface-bright: #fcf9f8;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f6f3f2;
+  --surface-container: #f0eded;
+  --surface-container-high: #eae7e7;
+  --surface-container-highest: #e5e2e1;
+  --outline: #857462;
+  --outline-variant: #d7c3ae;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+  
+  --primary-fixed: #ffddb4;
+  --primary-fixed-dim: #ffb955;
+  --on-primary-fixed: #291800;
+  --on-primary-fixed-variant: #633f00;
+  --secondary-fixed: #eae5e2;
+  --secondary-fixed-dim: #c6beb9;
+  --on-secondary-fixed: #211e1c;
+  --on-secondary-fixed-variant: #4d4643;
+  --tertiary-fixed: #eae5e2;
+  --tertiary-fixed-dim: #c6beb9;
+  --on-tertiary-fixed: #211e1c;
+  --on-tertiary-fixed-variant: #4d4643;
+}
+
+:root.dark {
+  --background: #111317;
+  --on-background: #e2e2e8;
+  --primary: #c6beb9;
+  --on-primary: #1c1b1b;
+  --primary-container: #615955;
+  --on-primary-container: #eae5e2;
+  --secondary: #ddb7ff;
+  --on-secondary: #490080;
+  --secondary-container: #6f00be;
+  --on-secondary-container: #d6a9ff;
+  --tertiary: #ffb783;
+  --on-tertiary: #4f2500;
+  --tertiary-container: #d97721;
+  --on-tertiary-container: #452000;
+  --surface: #111317;
+  --on-surface: #e2e2e8;
+  --surface-variant: #333539;
+  --on-surface-variant: #c7c4d7;
+  --surface-dim: #111317;
+  --surface-bright: #37393e;
+  --surface-container-lowest: #0c0e12;
+  --surface-container-low: #1a1c20;
+  --surface-container: #1e2024;
+  --surface-container-high: #282a2e;
+  --surface-container-highest: #333539;
+  --outline: #908fa0;
+  --outline-variant: #464554;
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+  
+  --primary-fixed: #eae5e2;
+  --primary-fixed-dim: #c6beb9;
+  --on-primary-fixed: #211e1c;
+  --on-primary-fixed-variant: #4d4643;
+  --secondary-fixed: #f0dbff;
+  --secondary-fixed-dim: #ddb7ff;
+  --on-secondary-fixed: #2c0051;
+  --on-secondary-fixed-variant: #6900b3;
+  --tertiary-fixed: #ffdcc5;
+  --tertiary-fixed-dim: #ffb783;
+  --on-tertiary-fixed: #301400;
+  --on-tertiary-fixed-variant: #703700;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--on-background);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Background Grids */
+.grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.dark .grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+}
+
+/* Custom Grids specifically for Landing page */
+.landing-grid {
+  background-image: linear-gradient(var(--surface-container) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--surface-container) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+}
+
+/* Ambient Glows */
+.glow-orange {
+  background: radial-gradient(circle at 50% 50%, rgba(245, 166, 35, 0.15) 0%, transparent 60%);
+}
+.dark .glow-orange {
+  background: radial-gradient(circle at 50% 50%, rgba(245, 166, 35, 0.08) 0%, transparent 60%);
+}
+.glow-blue {
+  background: radial-gradient(circle at 50% 50%, rgba(97, 89, 85, 0.1) 0%, transparent 60%);
+}
+.dark .glow-blue {
+  background: radial-gradient(circle at 50% 50%, rgba(198, 190, 185, 0.05) 0%, transparent 60%);
+}
+
+.glow-active {
+  box-shadow: 0 0 20px rgba(97, 89, 85, 0.1);
+}
+.dark .glow-active {
+  box-shadow: 0 0 20px rgba(97, 89, 85, 0.2);
+}
+
+.text-gradient-accent {
+  background: linear-gradient(90deg, #f5a623 0%, #615955 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dark .text-gradient-accent {
+  background: linear-gradient(90deg, #c0c1ff 0%, #ddb7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card, .glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--outline-variant);
+}
+.dark .glass-card, .dark .glass-panel {
+  background: rgba(26, 28, 32, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--outline-variant);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-container-low); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--outline-variant); 
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--outline); 
+}
+
+/* Material symbols utility styling */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.syntax-highlight-orange {
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+.syntax-highlight-blue {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+.syntax-highlighter-orange {
+  background-color: #f5a623;
+  color: white;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+.syntax-highlighter-blue {
+  background-color: #615955;
+  color: white;
+  padding: 0 4px;
+  border-radius: 2px;
+}

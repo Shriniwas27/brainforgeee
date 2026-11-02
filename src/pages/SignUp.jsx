@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export default function SignUp() {
+export default function SignUp({ onAuthenticated }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [isSignUpTab, setIsSignUpTab] = useState(true);
@@ -125,26 +125,9 @@ export default function SignUp() {
           </div>
 
           {/* OAuth Buttons */}
-          <div className="grid grid-cols-3 gap-stack-sm mb-stack-lg">
-            <button className="flex flex-col items-center justify-center py-3 border border-outline-variant hover:bg-surface-container-low rounded transition-all focus:outline-none">
-              <span className="material-symbols-outlined text-on-surface text-xl">hub</span>
-              <span className="font-label-caps text-[9px] mt-1 tracking-wider font-bold">GITHUB</span>
-            </button>
-            <button className="flex flex-col items-center justify-center py-3 border border-outline-variant hover:bg-surface-container-low rounded transition-all focus:outline-none">
-              <span className="material-symbols-outlined text-on-surface text-xl">google</span>
-              <span className="font-label-caps text-[9px] mt-1 tracking-wider font-bold">GOOGLE</span>
-            </button>
-            <button className="flex flex-col items-center justify-center py-3 border border-outline-variant hover:bg-surface-container-low rounded transition-all focus:outline-none">
-              <span className="material-symbols-outlined text-on-surface text-xl">art_track</span>
-              <span className="font-label-caps text-[9px] mt-1 tracking-wider font-bold">GITLAB</span>
-            </button>
-          </div>
+        
 
-          <div className="relative flex items-center mb-stack-lg">
-            <div className="flex-grow border-t border-outline-variant"></div>
-            <span className="mx-4 font-label-caps text-[10px] text-on-surface-variant font-bold">OR EMAIL</span>
-            <div className="flex-grow border-t border-outline-variant"></div>
-          </div>
+         
 
           {/* Form */}
           <form className="space-y-stack-md" onSubmit={(e) => e.preventDefault()}>
@@ -232,7 +215,10 @@ export default function SignUp() {
             )}
 
             <button
-              onClick={() => navigate("/rooms")}
+              onClick={() => {
+                onAuthenticated();
+                navigate("/rooms");
+              }}
               className="w-full h-14 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-caps text-sm font-bold tracking-widest active:scale-[0.98] transition-all flex items-center justify-center gap-2 rounded shadow-sm"
             >
               {isSignUpTab ? "GET STARTED" : "LOG IN"}

@@ -18,30 +18,36 @@ export default function LandingPage() {
                 rocket_launch
               </span>
               <span className="font-label-caps text-xs text-on-surface-variant tracking-wider">
-                VIBRANT WORKSPACE
+                ROOM-BASED CODING COMPETITIONS
               </span>
             </div>
 
             <h1 className="font-display-lg text-4xl md:text-5xl lg:text-display-lg text-on-surface leading-tight font-extrabold">
-              Learn to <span className="syntax-highlight-orange">code</span> your dreams and <span className="syntax-highlight-blue">design</span> your future
+              Compete, collaborate, and master <span className="syntax-highlight-orange">DSA</span> in real-time rooms
             </h1>
 
             <p className="font-body-md text-on-surface-variant max-w-lg leading-relaxed text-lg">
-              Build, collaborate, and master complex workflows in a high-energy environment engineered for modern developers. Clear syntax, real-time sync, zero friction.
+              Join live coding rooms and challenge other developers in timed competitions for Data Structures &amp; Algorithms, Aptitude, and problem-solving. Practice together, climb the leaderboard, and sharpen your skills.
             </p>
+
+            <div className="flex flex-wrap gap-2 text-sm font-semibold text-on-surface-variant">
+              <span className="rounded-full bg-surface border border-outline-variant px-3 py-1.5">DSA Challenges</span>
+              <span className="rounded-full bg-surface border border-outline-variant px-3 py-1.5">Aptitude Contests</span>
+              <span className="rounded-full bg-surface border border-outline-variant px-3 py-1.5">Live Leaderboards</span>
+            </div>
 
             <div className="flex flex-wrap gap-stack-md pt-2">
               <Link
-                to="/rooms"
+                to="/signup"
                 className="bg-primary-container text-on-primary-container font-body-md font-bold px-8 py-3.5 rounded hover:bg-primary hover:text-on-primary hover:scale-[1.02] active:scale-[0.98] transition-all shadow-sm text-center"
               >
-                Explore Course
+                Sign Up Free
               </Link>
               <Link
-                to="/signup"
+                to="/login"
                 className="bg-surface border border-outline text-on-surface font-body-md font-semibold px-8 py-3.5 rounded hover:bg-surface-container hover:scale-[1.02] active:scale-[0.98] transition-all text-center"
               >
-                Join Free Course
+                Log In
               </Link>
             </div>
           </div>

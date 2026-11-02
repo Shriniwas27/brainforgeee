@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Sidebar() {
+export default function Sidebar({ onSignOut }) {
   const location = useLocation();
 
   const menuItems = [
@@ -93,15 +93,14 @@ export default function Sidebar() {
       {/* Footer / Actions */}
       <div className="px-4 mt-auto border-t border-outline-variant/30 pt-4 flex flex-col gap-2">
         <div className="flex items-center justify-between px-2 py-1">
-          <Link
-            to="/login"
+          <button
+            onClick={onSignOut}
             className="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors flex items-center gap-2 focus:outline-none w-full"
-            title="Log In"
+            title="Log Out"
           >
-            {/* Increased log in elements font */}
-            <span className="material-symbols-outlined text-[22px]">login</span>
-            <span className="font-label-caps text-sm tracking-wider font-bold">LOG IN</span>
-          </Link>
+            <span className="material-symbols-outlined text-[22px]">logout</span>
+            <span className="font-label-caps text-sm tracking-wider font-bold">LOG OUT</span>
+          </button>
         </div>
       </div>
     </aside>

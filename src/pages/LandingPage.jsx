@@ -3,16 +3,25 @@ import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
-    <div className="relative h-screen w-full flex flex-col justify-center overflow-y-auto overflow-x-hidden landing-grid transition-colors duration-200">
+    <div className="relative min-h-screen w-full flex flex-col overflow-y-auto overflow-x-hidden landing-grid transition-colors duration-200">
       {/* Ambient Glows */}
       <div className="absolute top-10 left-[-10%] w-[50%] h-[600px] glow-blue -z-10 pointer-events-none rounded-full"></div>
       <div className="absolute top-[30%] right-[-10%] w-[50%] h-[600px] glow-orange -z-10 pointer-events-none rounded-full"></div>
 
-      <main className="max-w-[1200px] mx-auto px-margin-edge md:px-gutter lg:px-margin-edge w-full py-stack-lg z-10 my-auto">
+      <main className="max-w-[1200px] mx-auto px-margin-edge md:px-gutter lg:px-margin-edge w-full py-stack-lg z-10 flex-1 flex items-center">
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center min-h-[600px]">
           
           {/* Left Block: Heading and description */}
           <div className="lg:col-span-6 flex flex-col gap-stack-lg text-left">
+            <div className="flex items-center gap-2 text-primary">
+              <span className="material-symbols-outlined text-[30px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                terminal
+              </span>
+              <span className="font-display-lg text-3xl font-extrabold tracking-tight">
+                Brainqueue
+              </span>
+            </div>
+
             <div className="inline-flex items-center gap-2 bg-surface border border-outline-variant px-3 py-1.5 rounded-full w-fit shadow-sm">
               <span className="material-symbols-outlined text-primary text-sm animate-bounce">
                 rocket_launch
@@ -55,19 +64,8 @@ export default function LandingPage() {
           {/* Right Block: Live Coding Preview */}
           <div className="lg:col-span-6 relative mt-10 lg:mt-0 px-4">
             
-            {/* CSS 3 Floating Icon */}
-            <div className="absolute -top-10 -left-6 bg-surface p-4 rounded-xl border border-outline-variant shadow-md z-20 flex flex-col items-center gap-2 animate-bounce duration-1000">
-              <div 
-                className="w-12 h-12 bg-contain bg-no-repeat bg-center" 
-                style={{ 
-                  backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWsY57nNMWx7URLc2ZUdSb51gyINx9JlY9Y4kkjz0EfmzztGLrYqB0N8OPoxGQru1doIaMil1ywvNxPIkQARrV-jeV19Txuq1tVcIgIsefszH_hbKuMtJ0eKk35PKbGLLUV_W2yNV5Tu9Ha32dUwfzey3TAZeYGKl01CmuCyDcl6DXnekzrQ3v8AQtvkNXf5e0Ruzrp2F-EzRJfkO-6EDwmBZC4p3u0cgYWLpmD2LybmNzbu5WXPV7s2xL78cUBZmTpWZ-KazgyGbA')" 
-                }}
-              ></div>
-              <span className="font-label-caps text-[10px] text-on-surface-variant font-bold">CSS 3</span>
-            </div>
-
-            {/* Python Floating Icon */}
-            <div className="absolute -bottom-8 -right-4 bg-surface p-4 rounded-xl border border-outline-variant shadow-md z-20 flex flex-col items-center gap-2 animate-bounce duration-700">
+            {/* Featured language */}
+            <div className="absolute -bottom-8 -right-4 bg-surface p-4 rounded-xl border border-outline-variant shadow-md z-20 flex flex-col items-center gap-2">
               <div 
                 className="w-12 h-12 bg-contain bg-no-repeat bg-center" 
                 style={{ 
@@ -86,7 +84,7 @@ export default function LandingPage() {
                 <div className="w-3 h-3 rounded-full bg-primary-container"></div>
                 <div className="w-3 h-3 rounded-full bg-tertiary-container"></div>
                 <span className="ml-4 font-code-sm text-xs text-on-surface-variant">
-                  main.py - DevSolve Workspace
+                  main.py - Brainqueue Workspace
                 </span>
               </div>
 
@@ -94,19 +92,12 @@ export default function LandingPage() {
               <div className="p-6 font-code-sm text-sm text-on-surface bg-surface-container-lowest overflow-x-auto text-left leading-relaxed">
                 <pre>
                   <code>
-                    <span className="text-secondary font-bold">def</span> <span className="text-primary font-bold">init_project</span>(name: <span className="text-tertiary font-bold">str</span>) -&gt; <span className="text-tertiary font-bold">bool</span>:{"\n"}
-                    {"    "}<span className="text-on-surface-variant/70 italic"># Initialize a new high-energy workspace</span>{"\n"}
-                    {"    "}config = &#123;{"\n"}
-                    {"        "}<span className="text-secondary">"mode"</span>: <span className="text-secondary">"collaborative"</span>,{"\n"}
-                    {"        "}<span className="text-secondary">"theme"</span>: <span className="text-secondary">"Lumina"</span>,{"\n"}
-                    {"        "}<span className="text-secondary">"sync"</span>: <span className="text-primary">True</span>{"\n"}
-                    {"    "}&#125;{"\n\n"}
-                    {"    "}<span className="text-primary font-bold">if</span> setup_environment(config):{"\n"}
-                    {"        "}<span className="text-secondary">print</span>(f<span className="text-secondary">"Welcome to &#123;name&#125;! Let's build."</span>){"\n"}
-                    {"        "}<span className="text-primary font-bold">return True</span>{"\n\n"}
-                    {"    "}<span className="text-primary font-bold">return False</span>{"\n\n"}
-                    <span className="text-on-surface-variant/70 italic"># Awaiting user input...</span>{"\n"}
-                    <span className="animate-ping font-bold text-primary">|</span>
+                    <span className="text-on-surface-variant/70 italic"># Solve together. Learn faster.</span>{"\n"}
+                    <span className="text-secondary font-bold">def</span> <span className="text-primary font-bold">score_submission</span>(tests_passed, total_tests):{"\n"}
+                    {"    "}<span className="text-primary font-bold">return</span> round((tests_passed / total_tests) * <span className="text-tertiary font-bold">100</span>, <span className="text-tertiary font-bold">2</span>){"\n\n"}
+                    <span className="text-secondary">participants</span> = [<span className="text-secondary">"Ava"</span>, <span className="text-secondary">"Ravi"</span>, <span className="text-secondary">"Mina"</span>]{"\n"}
+                    <span className="text-secondary">leaderboard</span> = sorted(participants, key=<span className="text-primary">score_submission</span>, reverse=<span className="text-primary">True</span>){"\n\n"}
+                    <span className="text-on-surface-variant/70 italic"># Your next challenge starts here.</span>
                   </code>
                 </pre>
               </div>
@@ -115,6 +106,23 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
+
+      <footer className="border-t border-outline-variant bg-surface/80 px-margin-edge py-6 z-10">
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-on-surface-variant">
+          <div className="flex items-center gap-2">
+            <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>
+              terminal
+            </span>
+            <span className="font-bold text-on-surface">Brainqueue</span>
+            <span>Build skills. Beat the queue.</span>
+          </div>
+          <div className="flex items-center gap-5">
+            <Link to="/rooms" className="hover:text-primary transition-colors">Explore Rooms</Link>
+            <Link to="/signup" className="hover:text-primary transition-colors">Join Free</Link>
+            <span>© {new Date().getFullYear()} Brainqueue</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -119,7 +119,7 @@ export default function SignUp({ onAuthenticated }) {
             </h2>
             <p className="font-body-md text-sm text-on-surface-variant">
               {isSignUpTab
-                ? "Start building with the DevSolve community today."
+                ? "Start building with the Brainqueue community today."
                 : "Sign in to continue your collaborative sessions."}
             </p>
           </div>

@@ -56,7 +56,7 @@ export default function ContributionStudio() {
       alert("Please enter a Problem Title.");
       return;
     }
-    alert(`Publishing Problem: "${problemTitle}" to the DevSolve platform!`);
+    alert(`Publishing Problem: "${problemTitle}" to the Brainqueue platform!`);
   };
 
   const handleSubmitTestcases = () => {

@@ -58,7 +58,7 @@ export default function Sidebar({ onSignOut }) {
           {/* Increased brand name font from text-base to text-xl */}
           <h2 className="font-headline-lg-mobile text-xl font-extrabold text-primary flex items-center gap-1.5 tracking-tighter">
             <span className="material-symbols-outlined text-[26px]">terminal</span>
-            DevSolve
+            Brainqueue
           </h2>
           {/* Increased subtitle font from text-[11px] to text-xs */}
           <p className="text-on-surface-variant text-xs mt-0.5 font-semibold">VIBRANT WORKSPACE</p>

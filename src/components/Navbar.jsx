@@ -34,7 +34,7 @@ export default function Navbar() {
           <span className="material-symbols-outlined text-[32px] text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>
             terminal
           </span>
-          DevSolve
+          Brainqueue
         </Link>
 
         {/* Desktop Nav Links */}
